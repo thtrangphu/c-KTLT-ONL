@@ -134,7 +134,8 @@ void removeData(List& l, int data) {
 	prev->pNext = p;
 }
 void removeAll(List& l) {
-	for (Node* k = l.pHead; k; k = k->pNext) removeTail(l);
+	while (l.pHead != NULL) removeHead(l);
+	l.pHead = l.pTail = NULL;
 }
 void printList(List l) {
 	cout << "		=====  XUAT DANH SACH  ====" << endl;
