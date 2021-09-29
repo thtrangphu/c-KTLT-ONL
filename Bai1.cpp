@@ -6,10 +6,11 @@ using namespace std;
 
 void xoa(char s[], int viTri) {
 	int n = strlen(s);
-	for (int j = viTri; j < n - 1; j++) {
+	//Chay den n de sao chep ca /0 
+	for (int j = viTri; j < n; j++) {
 		s[j] = s[j + 1];
 	}
-	s[n - 1] = '\0';
+	//s[n - 1] = '\0';
 }
 void vietHoaDau(char s[]) {
 	int n = strlen(s);
