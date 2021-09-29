@@ -17,7 +17,9 @@ void chuanHoa2(char s[]) {
 	while (s[i] == ' ') {
 		i++;
 	}
-
+	s1[j++] = s[i++];
+	if(s1[0] >= 'a' && s1[0] <= 'z')
+		s1[0] -= 32;
 	for (; i < n; i++) {
 		while (s[i] == ' ' && s[i + 1] == ' ') {
 			i++;
@@ -39,7 +41,7 @@ void chuanHoa2(char s[]) {
 	cout <<"Xong game:"<< s1 << endl;
 }
 int main() {
-	char s[] = "      pHu   tHi    kiM  TranG       ";
+	char s[] = "pHu   tHi    kiM  TranG       ";
 	cout << s << endl;
 
 	chuanHoa2(s);
